@@ -21,3 +21,196 @@ body {
     box-shadow: $lh-shadow-sm;
     border: 1px solid $lh-border;
 }
+
+
+// ============================================================
+// Learning Hub - Dashboard
+// ============================================================
+
+@media (min-width: 992px) {
+
+    .pagelayout-mydashboard {
+
+        // ----------------------------------------------------
+        // Dashboard Shell
+        // ----------------------------------------------------
+
+        #page.drawers {
+            padding-left: 285px !important;
+            padding-right: 0 !important;
+
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+
+
+        // ----------------------------------------------------
+        // Permanent Left Sidebar
+        // ----------------------------------------------------
+
+        #theme_boost-drawers-blocks.drawer-right {
+            left: 16px !important;
+            right: auto !important;
+
+            top: 84px !important;
+            bottom: 16px !important;
+
+            width: 269px !important;
+            max-width: 269px !important;
+
+            transform: translateX(0) !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+
+            background: transparent;
+
+            border: 0;
+            box-shadow: none;
+        }
+
+
+        // ----------------------------------------------------
+        // Sidebar Content
+        // ----------------------------------------------------
+
+        #theme_boost-drawers-blocks {
+
+            .drawerheader {
+                display: none !important;
+            }
+
+            .drawercontent {
+                padding: 0 0 16px 0;
+            }
+        }
+
+
+        // ----------------------------------------------------
+        // Remove Drawer Controls
+        // ----------------------------------------------------
+
+        .drawer-right-toggle,
+        .drawer-left-toggle,
+        #theme_boost-drawers-blocks .drawertoggle,
+        #theme_boost-drawers-blocks .drawerheader button {
+            display: none !important;
+        }
+
+
+        // ----------------------------------------------------
+        // Dashboard Main Area
+        // ----------------------------------------------------
+
+        #topofscroll,
+        .main-inner {
+            width: 100% !important;
+            max-width: none !important;
+
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+
+
+        // ----------------------------------------------------
+        // Dashboard Header
+        // ----------------------------------------------------
+
+        #page-header,
+        .header-maxwidth {
+            width: 100% !important;
+            max-width: none !important;
+        }
+
+
+        // ----------------------------------------------------
+        // Main Content
+        // ----------------------------------------------------
+
+        #page-content,
+        #region-main-box,
+        #region-main,
+        #block-region-content {
+            width: 100% !important;
+            max-width: none !important;
+
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+
+
+        // Create visual gap between sidebar and dashboard.
+        #page-content {
+            padding-top: 24px !important;
+            padding-left: 64px !important;
+            padding-right: 24px !important;
+        }
+
+
+        #region-main-box {
+            padding: 0 !important;
+        }
+
+
+        #region-main {
+            padding: 0 !important;
+
+            background: transparent !important;
+            border: 0 !important;
+            box-shadow: none !important;
+            border-radius: 0 !important;
+        }
+
+
+        // ----------------------------------------------------
+        // Remove Bootstrap Container Restrictions
+        // ----------------------------------------------------
+
+        #page-content .container,
+        #page-content .container-fluid,
+        #region-main .container,
+        #region-main .container-fluid {
+
+            width: 100% !important;
+            max-width: none !important;
+
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+    }
+}
+
+
+// ============================================================
+// Dashboard - General
+// ============================================================
+
+.pagelayout-mydashboard {
+
+    #region-main {
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+    }
+}
+
+
+// ============================================================
+// Learning Hub - Mobile
+// ============================================================
+
+@media (max-width: 991.98px) {
+
+    .pagelayout-mydashboard {
+
+        #page-content {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+
+        #region-main {
+            background: transparent;
+            border: 0;
+            box-shadow: none;
+        }
+    }
+}
