@@ -1,0 +1,213 @@
+{{!
+    Learning Hub - Premium Login Page
+}}
+
+{{> theme_boost/head }}
+
+<body {{{ bodyattributes }}}>
+
+{{> core/local/toast/wrapper}}
+
+<div id="page-wrapper">
+
+    {{{ output.standard_top_of_body_html }}}
+
+    <!-- ============================================================
+         Learning Hub Header
+         ============================================================ -->
+    <header class="lh-header">
+        <div class="lh-container lh-header-inner">
+
+            <!-- Brand -->
+            <a href="{{{ config.wwwroot }}}" class="lh-brand">
+
+                {{#logo}}
+                    <img
+                        src="{{logo}}"
+                        alt="{{logoalt}}"
+                        class="lh-brand-logo">
+                {{/logo}}
+
+                {{^logo}}
+                    <span class="lh-brand-mark">
+                        <span></span>
+                        <span></span>
+                    </span>
+
+                    <span class="lh-brand-text">
+                        <strong>{{brandname}}</strong>
+                        <small>{{tagline}}</small>
+                    </span>
+                {{/logo}}
+
+            </a>
+
+            <!-- Navigation -->
+            <nav class="lh-navigation">
+
+                <a
+                    href="{{{ config.wwwroot }}}"
+                    class="lh-nav-link">
+                    Home
+                </a>
+
+                <a
+                    href="{{{ config.wwwroot }}}#lh-services"
+                    class="lh-nav-link">
+                    Features
+                </a>
+
+                <a
+                    href="{{{ config.wwwroot }}}#lh-about"
+                    class="lh-nav-link">
+                    About Me
+                </a>
+
+                <a
+                    href="{{{ config.wwwroot }}}/local/learninghub/"
+                    class="lh-nav-link">
+                    Contact
+                </a>
+
+            </nav>
+
+            <!-- Header CTA -->
+            <a
+                href="{{{ config.wwwroot }}}#lh-contact"
+                class="lh-header-cta">
+                Let's Build Your LMS →
+            </a>
+
+            <!-- User Menu -->
+            <div class="lh-user-menu">
+                {{{ output.user_menu }}}
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- ============================================================
+         Login Section
+         ============================================================ -->
+    <main class="learninghub-login">
+
+        <div class="learninghub-login__shell">
+
+            <!-- ====================================================
+                 Left Branding Panel
+                 ==================================================== -->
+            <section class="learninghub-login__panel">
+
+                <div class="learninghub-login__panel-content">
+
+                    {{#logocompact}}
+                        <div class="learninghub-login__panel-logo">
+                            <img
+                                src="{{logocompact}}"
+                                alt="{{logoalt}}">
+                        </div>
+                    {{/logocompact}}
+
+                    {{^logocompact}}
+                        <div class="learninghub-login__brand-mark">
+                            LH
+                        </div>
+
+                        <div class="learninghub-login__panel-brand">
+                            {{brandname}}
+                        </div>
+                    {{/logocompact}}
+
+                    <div class="learninghub-login__panel-title">
+                        Learning that<br>
+                        moves you forward.
+                    </div>
+
+                    <div class="learninghub-login__panel-description">
+                        A modern learning platform for engaging,
+                        accessible and meaningful professional development.
+                    </div>
+
+                    <div class="learninghub-login__panel-line"></div>
+
+                    <div class="learninghub-login__panel-caption">
+                        {{tagline}}
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ====================================================
+                 Login Card
+                 ==================================================== -->
+            <section class="learninghub-login__card">
+
+                <div class="learninghub-login__heading">
+
+                    {{#logo}}
+                        <div class="learninghub-login__logo">
+                            <img
+                                src="{{logo}}"
+                                alt="{{logoalt}}">
+                        </div>
+                    {{/logo}}
+
+                    {{^logo}}
+                        <div class="learninghub-login__mobile-brand">
+                            {{brandname}}
+                        </div>
+                    {{/logo}}
+
+                    <h1>
+                        Welcome back
+                    </h1>
+
+                    <p>
+                        Sign in to continue your learning journey.
+                    </p>
+
+                </div>
+
+
+                <!-- Moodle Login Form -->
+                <div class="learninghub-login__form">
+                    {{{ output.main_content }}}
+                </div>
+
+
+                <!-- Login Footer -->
+                <div class="learninghub-login__footer">
+                    {{brandname}}
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- ============================================================
+         Footer
+         ============================================================ -->
+    {{> theme_boost/footer }}
+
+</div>
+
+
+<!-- ================================================================
+     Moodle JavaScript
+     ================================================================ -->
+{{#js}}
+M.util.js_pending('theme_boost/loader');
+
+require(['theme_boost/loader'], function() {
+    M.util.js_complete('theme_boost/loader');
+});
+{{/js}}
+
+</body>
+</html>

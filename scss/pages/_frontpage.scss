@@ -1,0 +1,1536 @@
+// ============================================================
+// Learning Hub - Product Landing Page
+// ============================================================
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+#learninghub-frontpage {
+    min-height: 100vh;
+    background: $lh-background;
+}
+
+// ------------------------------------------------------------
+// Container
+// ------------------------------------------------------------
+
+.lh-container {
+    width: min(1200px, calc(100% - 3rem));
+    margin: 0 auto;
+}
+
+// ------------------------------------------------------------
+// Header
+// ------------------------------------------------------------
+
+.lh-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: $lh-white;
+    border-bottom: 1px solid $lh-border;
+}
+
+.lh-header-inner {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.lh-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-right: auto;
+    color: $lh-black;
+    text-decoration: none;
+
+    &:hover {
+        color: $lh-black;
+        text-decoration: none;
+    }
+}
+
+.lh-brand-logo {
+    display: block;
+    width: auto;
+    max-width: 190px;
+    max-height: 58px;
+    object-fit: contain;
+}
+
+.lh-brand-mark {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    span {
+        display: block;
+        width: 15px;
+        height: 28px;
+        background: $lh-secondary;
+        border-radius: 3px 10px 3px 3px;
+    }
+
+    span:last-child {
+        background: $lh-primary;
+        border-radius: 10px 3px 3px 3px;
+    }
+}
+
+.lh-brand-text {
+    display: flex;
+    flex-direction: column;
+
+    strong {
+        color: $lh-black;
+        font-size: 1.2rem;
+        line-height: 1.1;
+    }
+
+    small {
+        margin-top: 3px;
+        color: $lh-secondary;
+        font-size: 0.68rem;
+    }
+}
+
+.lh-navigation {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    a {
+        padding: 1.55rem 0 1.25rem;
+        border-bottom: 2px solid transparent;
+        color: $lh-black;
+        font-size: 0.82rem;
+        font-weight: 600;
+        text-decoration: none;
+
+        &:hover,
+        &.active {
+            color: $lh-secondary;
+            border-bottom-color: $lh-secondary;
+        }
+    }
+}
+
+.lh-header-cta {
+    padding: 0.75rem 1.2rem;
+    border-radius: $lh-radius-md;
+    background: $lh-secondary;
+    color: $lh-white !important;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 6px 16px rgba(47, 128, 237, 0.2);
+
+    &:hover {
+        background: $lh-primary;
+        color: $lh-white;
+        text-decoration: none;
+    }
+}
+
+// ------------------------------------------------------------
+// Hero
+// ------------------------------------------------------------
+
+.lh-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 4.5rem 0 3.5rem;
+    background:
+        radial-gradient(
+            circle at 82% 42%,
+            rgba(47, 128, 237, 0.16),
+            transparent 31%
+        ),
+        linear-gradient(135deg, #ffffff 0%, #edf7ff 100%);
+}
+
+.lh-hero-grid {
+    position: relative;
+    z-index: 2;
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr) !important;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.lh-hero-content {
+    position: relative;
+    z-index: 5;
+}
+
+.lh-eyebrow {
+    display: block;
+    margin-bottom: 1rem;
+    color: $lh-secondary;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+}
+
+.lh-hero h1 {
+    margin: 0 0 1.25rem;
+    color: #111b35;
+    font-size: clamp(3.2rem, 5vw, 5rem);
+    line-height: 0.98;
+    font-weight: 800;
+    letter-spacing: -0.045em;
+
+    span {
+        display: block;
+        color: $lh-secondary;
+    }
+}
+
+.lh-hero-content > p {
+    max-width: 570px;
+    margin: 0 0 2rem;
+    color: #40516b;
+    font-size: 1.02rem;
+    line-height: 1.75;
+}
+
+.lh-hero-actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.lh-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+    padding: 0.85rem 1.35rem;
+    border-radius: $lh-radius-md;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.lh-btn-primary {
+    background: $lh-secondary;
+    color: $lh-white;
+    box-shadow: 0 9px 22px rgba(47, 128, 237, 0.25);
+
+    &:hover {
+        color: $lh-white;
+        text-decoration: none;
+        transform: translateY(-2px);
+        box-shadow: 0 13px 28px rgba(47, 128, 237, 0.3);
+    }
+}
+
+.lh-btn-outline {
+    border: 2px solid $lh-secondary;
+    background: $lh-white;
+    color: $lh-secondary;
+
+    span {
+        margin-right: 0.45rem;
+        font-size: 0.75rem;
+    }
+
+    &:hover {
+        color: $lh-secondary;
+        background: $lh-primary-light;
+        text-decoration: none;
+        transform: translateY(-2px);
+    }
+}
+
+// ------------------------------------------------------------
+// Hero feature row
+// ------------------------------------------------------------
+
+.lh-hero-features {
+    display: flex;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.lh-feature {
+    min-width: 72px;
+    text-align: center;
+
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 43px;
+        height: 43px;
+        margin: 0 auto 0.45rem;
+        border: 1px solid rgba(47, 128, 237, 0.12);
+        border-radius: $lh-radius-md;
+        background: rgba(255, 255, 255, 0.75);
+        color: $lh-secondary;
+        font-size: 1.15rem;
+        box-shadow: 0 5px 15px rgba(31, 78, 121, 0.06);
+    }
+
+    small {
+        color: #34445d;
+        font-size: 0.67rem;
+        font-weight: 600;
+    }
+}
+
+// ------------------------------------------------------------
+// Stats
+// ------------------------------------------------------------
+
+.lh-hero-stats {
+    display: flex;
+    gap: 1.7rem;
+}
+
+.lh-hero-stats div {
+    padding-right: 1.5rem;
+    border-right: 1px solid rgba(31, 78, 121, 0.16);
+
+    &:last-child {
+        padding-right: 0;
+        border-right: 0;
+    }
+
+    strong {
+        display: block;
+        color: $lh-secondary;
+        font-size: 1.55rem;
+        line-height: 1;
+    }
+
+    span {
+        display: block;
+        margin-top: 0.35rem;
+        color: #40516b;
+        font-size: 0.65rem;
+        white-space: nowrap;
+    }
+}
+
+// ------------------------------------------------------------
+// Product visual
+// ------------------------------------------------------------
+
+.lh-hero-product {
+    position: relative;
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lh-product-glow {
+    position: absolute;
+    width: 560px;
+    height: 430px;
+    border-radius: 50%;
+    background: rgba(82, 166, 255, 0.15);
+    filter: blur(8px);
+}
+
+// ------------------------------------------------------------
+// Dashboard
+// ------------------------------------------------------------
+
+.lh-dashboard {
+    position: absolute;
+    z-index: 2;
+    right: -2%;
+    top: 50%;
+    width: 78%;
+    max-width: 680px;
+    min-height: 400px;
+    display: flex;
+    overflow: hidden;
+
+    border: 1px solid rgba(47, 128, 237, 0.18);
+    border-radius: 20px;
+    background: $lh-white;
+
+    box-shadow: 0 30px 70px rgba(31, 78, 121, 0.22);
+
+    transform:
+        translateY(-50%)
+        perspective(1400px)
+        rotateY(-10deg)
+        rotateZ(3deg);
+}
+
+.lh-dashboard-sidebar {
+    width: 145px;
+    flex-shrink: 0;
+    padding: 1.3rem 0.8rem;
+    background: $lh-primary;
+}
+
+.lh-dashboard-logo {
+    margin: 0 0 1.4rem 0.4rem;
+    color: $lh-white;
+    font-size: 1rem;
+}
+
+.lh-dashboard-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-bottom: 0.35rem;
+    padding: 0.65rem 0.55rem;
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.62rem;
+
+    span {
+        width: 16px;
+        text-align: center;
+    }
+
+    &.active {
+        background: $lh-secondary;
+        color: $lh-white;
+    }
+}
+
+.lh-dashboard-main {
+    flex: 1;
+    padding: 1.45rem;
+    background: #f8fbff;
+}
+
+.lh-dashboard-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    div:first-child {
+        display: flex;
+        flex-direction: column;
+    }
+
+    strong {
+        color: #16233b;
+        font-size: 0.95rem;
+    }
+
+    small {
+        margin-top: 3px;
+        color: $lh-text-muted;
+        font-size: 0.61rem;
+    }
+}
+
+.lh-dashboard-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: $lh-primary-light;
+    color: $lh-secondary;
+    font-size: 0.65rem;
+    font-weight: 800;
+}
+
+.lh-dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.65rem;
+    margin-bottom: 0.8rem;
+}
+
+.lh-dashboard-stats div {
+    padding: 0.7rem;
+    border: 1px solid $lh-border;
+    border-radius: 7px;
+    background: $lh-white;
+
+    .lh-stat-icon {
+        display: block;
+        font-size: 0.75rem;
+
+        &.blue {
+            color: $lh-secondary;
+        }
+
+        &.green {
+            color: $lh-accent;
+        }
+
+        &.orange {
+            color: #f2994a;
+        }
+    }
+
+    strong {
+        display: block;
+        margin-top: 0.2rem;
+        color: #17243b;
+        font-size: 1rem;
+    }
+
+    small {
+        color: $lh-text-muted;
+        font-size: 0.53rem;
+    }
+}
+
+.lh-progress-card {
+    margin-bottom: 0.8rem;
+    padding: 0.85rem;
+    border: 1px solid $lh-border;
+    border-radius: 7px;
+    background: $lh-white;
+}
+
+.lh-progress-heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.55rem;
+
+    strong {
+        color: #17243b;
+        font-size: 0.65rem;
+    }
+}
+
+.lh-progress-bar {
+    height: 7px;
+    overflow: hidden;
+    border-radius: 99px;
+    background: #e3ebf5;
+
+    span {
+        display: block;
+        width: 75%;
+        height: 100%;
+        border-radius: inherit;
+        background: $lh-accent;
+    }
+}
+
+.lh-courses > strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #17243b;
+    font-size: 0.68rem;
+}
+
+.lh-course-item {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-bottom: 0.35rem;
+    padding: 0.5rem;
+    border: 1px solid $lh-border;
+    border-radius: 5px;
+    background: $lh-white;
+    color: #40516b;
+    font-size: 0.55rem;
+
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 22px;
+        height: 22px;
+        border-radius: 4px;
+        background: $lh-primary-light;
+        color: $lh-secondary;
+        font-size: 0.5rem;
+    }
+
+    b {
+        margin-left: auto;
+        color: $lh-secondary;
+    }
+}
+
+// ------------------------------------------------------------
+// Person
+// ------------------------------------------------------------
+
+.lh-person {
+    position: absolute;
+    z-index: 5;
+
+    left: 12%;
+    bottom: -5px;
+
+    width: 58%;
+    max-width: 500px;
+
+    pointer-events: none;
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+
+        filter:
+            drop-shadow(0 25px 35px rgba(31, 78, 121, 0.25));
+    }
+}
+
+.lh-calligraphy {
+    position: absolute;
+    z-index: 6;
+    top: 15%;
+    left: 2%;
+    max-width: 190px;
+    color: $lh-primary;
+    font-family: "Brush Script MT", "Segoe Script", cursive;
+    font-size: 2rem;
+    line-height: 1.05;
+    font-weight: 600;
+    transform: rotate(-5deg);
+
+    span {
+        display: block;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 85px;
+        height: 3px;
+        margin: 0.5rem 0 0 1rem;
+        background: $lh-secondary;
+        border-radius: 50%;
+        transform: rotate(-3deg);
+    }
+}
+
+// ------------------------------------------------------------
+// Quote
+// ------------------------------------------------------------
+
+.lh-quote-card {
+    position: absolute;
+    z-index: 6;
+    left: 5%;
+    bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 245px;
+    padding: 0.9rem 1rem;
+    border: 1px solid $lh-border;
+    border-radius: $lh-radius-md;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: $lh-shadow-md;
+
+    span {
+        color: $lh-secondary;
+        font-size: 1.7rem;
+        line-height: 0.7;
+    }
+
+    strong {
+        margin-top: 0.3rem;
+        color: #17243b;
+        font-size: 0.76rem;
+        line-height: 1.4;
+    }
+
+    i {
+        width: 42px;
+        height: 2px;
+        margin-top: 0.6rem;
+        background: $lh-secondary;
+    }
+}
+
+// ------------------------------------------------------------
+// Floating card
+// ------------------------------------------------------------
+
+.lh-floating-card {
+    position: absolute;
+    z-index: 7;
+    top: 2rem;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.7rem 1rem;
+    border: 1px solid $lh-border;
+    border-radius: $lh-radius-md;
+    background: $lh-white;
+    box-shadow: $lh-shadow-md;
+
+    > span {
+        font-size: 1.15rem;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    strong {
+        color: #17243b;
+        font-size: 0.65rem;
+    }
+
+    small {
+        color: $lh-text-muted;
+        font-size: 0.55rem;
+    }
+}
+
+// ------------------------------------------------------------
+// Books
+// ------------------------------------------------------------
+
+.lh-floating-books {
+    position: absolute;
+    z-index: 6;
+    right: -0.3rem;
+    bottom: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    transform: rotate(-3deg);
+
+    span {
+        padding: 0.28rem 0.75rem;
+        border-radius: 3px;
+        color: $lh-white;
+        background: $lh-primary;
+        font-size: 0.5rem;
+        font-weight: 800;
+        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.12);
+    }
+
+    span:nth-child(2) {
+        background: $lh-secondary;
+    }
+
+    span:nth-child(3) {
+        background: $lh-accent;
+    }
+}
+
+// ------------------------------------------------------------
+// Services
+// ------------------------------------------------------------
+
+.lh-services {
+    padding: 6rem 0;
+    background: #f7f9ff;
+}
+
+.lh-section-intro {
+    max-width: 700px;
+    margin-bottom: 3rem;
+}
+
+.lh-section-eyebrow {
+    display: block;
+    margin-bottom: 0.6rem;
+    color: $lh-secondary;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+}
+
+.lh-section-intro h2 {
+    margin: 0 0 1rem;
+    color: #111b35;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+
+    span {
+        color: $lh-secondary;
+    }
+}
+
+.lh-section-intro p {
+    max-width: 620px;
+    margin: 0;
+    color: $lh-text-muted;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.lh-services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+}
+
+.lh-service-card {
+    position: relative;
+    padding: 1.75rem;
+    border: 1px solid $lh-border;
+    border-radius: $lh-radius-lg;
+    background: $lh-white;
+    box-shadow: $lh-shadow-sm;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    &:hover {
+        transform: translateY(-7px);
+        box-shadow: $lh-shadow-md;
+    }
+
+    h3 {
+        margin: 1.25rem 0 0.65rem;
+        color: #111b35;
+        font-size: 1.05rem;
+        line-height: 1.3;
+    }
+
+    p {
+        min-height: 105px;
+        margin: 0 0 1.2rem;
+        color: $lh-text-muted;
+        font-size: 0.82rem;
+        line-height: 1.65;
+    }
+
+    a {
+        color: $lh-secondary;
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+            color: $lh-primary;
+        }
+    }
+}
+
+.lh-service-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: $lh-radius-md;
+    background: $lh-primary-light;
+    color: $lh-secondary;
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+// ------------------------------------------------------------
+// About Me
+// ------------------------------------------------------------
+
+.lh-about {
+    padding: 6rem 0;
+    background: $lh-white;
+}
+
+.lh-about-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: center;
+    gap: 5rem;
+}
+
+.lh-about-photo {
+    position: relative;
+    min-height: 430px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.lh-about-shape {
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    background: $lh-primary-light;
+}
+
+.lh-about-photo img {
+    position: relative;
+    z-index: 2;
+    width: 80%;
+    max-width: 350px;
+    height: auto;
+    filter: drop-shadow(0 20px 30px rgba(31, 78, 121, 0.18));
+}
+
+.lh-about-content h2 {
+    margin: 0 0 1.25rem;
+    color: #111b35;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.1;
+    font-weight: 800;
+    letter-spacing: -0.035em;
+
+    span {
+        display: block;
+        color: $lh-secondary;
+    }
+}
+
+.lh-about-content > p {
+    max-width: 650px;
+    margin-bottom: 1rem;
+    color: $lh-text-muted;
+    font-size: 0.95rem;
+    line-height: 1.75;
+}
+
+.lh-about-highlights {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.lh-about-highlights div {
+    padding-right: 2rem;
+    border-right: 1px solid $lh-border;
+
+    &:last-child {
+        padding-right: 0;
+        border-right: 0;
+    }
+
+    strong {
+        display: block;
+        color: $lh-secondary;
+        font-size: 1.5rem;
+        line-height: 1;
+    }
+
+    span {
+        display: block;
+        max-width: 110px;
+        margin-top: 0.4rem;
+        color: $lh-text-muted;
+        font-size: 0.65rem;
+        line-height: 1.4;
+    }
+}
+
+// ------------------------------------------------------------
+// Contact
+// ------------------------------------------------------------
+
+.lh-contact {
+    padding: 6rem 0;
+    background: #f7f9ff;
+}
+
+.lh-contact-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    min-height: 360px;
+    overflow: hidden;
+    padding: 4rem;
+    border-radius: $lh-radius-lg;
+    background:
+        radial-gradient(
+            circle at 85% 50%,
+            rgba(47, 128, 237, 0.18),
+            transparent 35%
+        ),
+        linear-gradient(135deg, #eef7ff, #ffffff);
+    border: 1px solid rgba(47, 128, 237, 0.12);
+    box-shadow: $lh-shadow-md;
+}
+
+.lh-contact-content {
+    position: relative;
+    z-index: 2;
+}
+
+.lh-contact-content h2 {
+    margin: 0 0 1rem;
+    color: #111b35;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.1;
+    font-weight: 800;
+
+    span {
+        display: block;
+        color: $lh-secondary;
+    }
+}
+
+.lh-contact-content p {
+    max-width: 620px;
+    margin-bottom: 1.75rem;
+    color: $lh-text-muted;
+    line-height: 1.7;
+}
+
+.lh-contact-visual {
+    position: relative;
+    min-height: 250px;
+}
+
+.lh-contact-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: $lh-secondary;
+    color: $lh-white;
+    font-size: 4rem;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 20px 45px rgba(47, 128, 237, 0.25);
+}
+
+.lh-contact-dot {
+    position: absolute;
+    top: 15%;
+    right: 15%;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: $lh-accent;
+}
+
+.lh-contact-line {
+    position: absolute;
+    right: 5%;
+    bottom: 15%;
+    width: 120px;
+    height: 4px;
+    border-radius: 99px;
+    background: $lh-primary;
+    transform: rotate(-15deg);
+}
+
+// ------------------------------------------------------------
+// Responsive
+// ------------------------------------------------------------
+
+@media (max-width: 1100px) {
+    .lh-navigation {
+        gap: 0.9rem;
+    }
+
+    .lh-hero-grid {
+        gap: 1rem;
+    }
+
+    .lh-hero-stats {
+        gap: 0.9rem;
+    }
+
+    .lh-hero-stats div {
+        padding-right: 0.8rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .lh-header-cta {
+        display: none;
+    }
+
+    .lh-hero-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .lh-hero-content {
+        text-align: center;
+    }
+
+    .lh-hero-content > p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .lh-hero-actions,
+    .lh-hero-features,
+    .lh-hero-stats {
+        justify-content: center;
+    }
+
+    .lh-hero-product {
+        min-height: 480px;
+    }
+    .lh-about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.lh-about-photo {
+    min-height: 350px;
+}
+.lh-contact-card {
+    grid-template-columns: 1fr;
+    padding: 3rem;
+}
+
+.lh-contact-visual {
+    min-height: 220px;
+}
+}
+
+@media (max-width: 767.98px) {
+    .lh-container {
+        width: min(100% - 2rem, 600px);
+    }
+
+    .lh-navigation {
+        display: none;
+    }
+
+    .lh-header-inner {
+        min-height: 64px;
+    }
+
+    .lh-hero {
+        padding: 3.5rem 0;
+    }
+
+    .lh-hero h1 {
+        font-size: 3rem;
+    }
+
+    .lh-hero-product {
+        min-height: 370px;
+    }
+
+    .lh-dashboard {
+        min-height: 300px;
+        transform: none;
+    }
+
+    .lh-dashboard-sidebar {
+        width: 105px;
+    }
+
+    .lh-dashboard-nav {
+        font-size: 0.5rem;
+    }
+
+    .lh-dashboard-main {
+        padding: 1rem;
+    }
+
+    .lh-floating-card,
+    .lh-floating-books {
+        display: none;
+    }
+
+    .lh-quote-card {
+        left: 0;
+        bottom: 0;
+        transform: scale(0.85);
+        transform-origin: bottom left;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .lh-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .lh-hero-actions {
+        flex-direction: column;
+    }
+
+    .lh-btn {
+        width: 100%;
+    }
+
+    .lh-hero-features {
+        gap: 0.4rem;
+    }
+
+    .lh-hero-stats {
+        flex-wrap: wrap;
+    }
+
+    .lh-hero-stats div {
+        border-right: 0;
+    }
+
+    .lh-dashboard-sidebar {
+        display: none;
+    }
+
+    .lh-dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .lh-person {
+        left: 50%;
+        width: 55%;
+        transform: translateX(-50%);
+    }
+}
+
+// ============================================================
+// Learning Hub - Dedicated Contact Page
+// ============================================================
+
+.lh-contact-main {
+    min-height: calc(100vh - 80px);
+    background: $lh-background;
+}
+
+.lh-contact-hero {
+    padding: 5rem 0 6rem;
+}
+
+.lh-contact-page {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 4rem;
+    background: $lh-white;
+    border: 1px solid $lh-border;
+    border-radius: $lh-radius-lg;
+    box-shadow: $lh-shadow-md;
+}
+
+.lh-contact-page-header {
+    max-width: 760px;
+    margin-bottom: 3rem;
+}
+
+.lh-contact-page-header .lh-section-eyebrow {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    color: $lh-secondary;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.lh-contact-title {
+    margin: 0 0 1rem;
+    color: $lh-black;
+    font-size: clamp(2.25rem, 5vw, 3.75rem);
+    line-height: 1.08;
+    font-weight: $lh-heading-weight;
+    letter-spacing: -0.04em;
+
+    span {
+        display: block;
+        color: $lh-primary;
+    }
+}
+
+.lh-contact-intro {
+    max-width: 700px;
+    margin: 0;
+    color: $lh-text-muted;
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+.lh-contact-form {
+    max-width: 850px;
+}
+
+.lh-contact-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.lh-form-group {
+    margin-bottom: 1.5rem;
+
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: $lh-black;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .form-control {
+        width: 100%;
+        min-height: 52px;
+        padding: 0.8rem 1rem;
+        border: 1px solid $lh-border;
+        border-radius: $lh-radius-md;
+        background: $lh-white;
+        color: $lh-text;
+        font-size: 0.95rem;
+        transition:
+            border-color 0.2s ease,
+            box-shadow 0.2s ease,
+            transform 0.2s ease;
+
+        &:hover {
+            border-color: #cbd5e1;
+        }
+
+        &:focus {
+            border-color: $lh-secondary;
+            box-shadow: 0 0 0 4px rgba(47, 128, 237, 0.1);
+            outline: none;
+        }
+    }
+
+    textarea.form-control {
+        min-height: 190px;
+        resize: vertical;
+    }
+}
+
+.lh-contact-form-footer {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.lh-contact-submit {
+    min-height: 52px;
+    padding: 0.8rem 1.8rem;
+    border: 0;
+    border-radius: $lh-radius-md;
+    background: $lh-primary;
+    color: $lh-white;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(31, 78, 121, 0.16);
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+    &:hover,
+    &:focus {
+        background: $lh-primary-dark;
+        color: $lh-white;
+        box-shadow: 0 12px 25px rgba(31, 78, 121, 0.22);
+        transform: translateY(-2px);
+    }
+}
+
+.lh-contact-note {
+    color: $lh-text-muted;
+    font-size: 0.85rem;
+}
+
+.lh-contact-success {
+    max-width: 700px;
+    padding: 2.5rem;
+    text-align: center;
+    border: 1px solid rgba(39, 174, 96, 0.18);
+    border-radius: $lh-radius-lg;
+    background: #f4fbf7;
+
+    h2 {
+        margin: 1rem 0 0.75rem;
+        color: $lh-primary;
+        font-size: 1.75rem;
+    }
+
+    p {
+        margin-bottom: 1.5rem;
+        color: $lh-text-muted;
+        line-height: 1.7;
+    }
+}
+
+.lh-contact-success-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: $lh-success;
+    color: $lh-white;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.lh-contact-error {
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 767.98px) {
+
+    .lh-contact-hero {
+        padding: 2rem 0 3rem;
+    }
+
+    .lh-contact-page {
+        margin: 0 1rem;
+        padding: 2rem 1.25rem;
+    }
+
+    .lh-contact-title {
+        font-size: 2.25rem;
+    }
+
+    .lh-contact-form-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .lh-contact-form-footer {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .lh-contact-submit {
+        width: 100%;
+    }
+
+    .lh-contact-note {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+// ============================================================
+// Learning Hub - Contact Page Layout Fix
+// ============================================================
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.lh-contact-main {
+    display: block;
+    width: 100%;
+    min-height: 100vh;
+    overflow: visible;
+}
+
+.lh-contact-hero {
+    display: block;
+    width: 100%;
+    min-height: auto;
+    overflow: visible;
+}
+
+.lh-contact-page {
+    position: relative;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+}
+
+.lh-contact-form {
+    position: relative;
+    height: auto;
+    overflow: visible;
+}
+
+#page,
+#page-wrapper,
+#region-main,
+#region-main-box {
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+}
+
+// ============================================================
+// Learning Hub - Contact Page Viewport Fix
+// ============================================================
+
+html,
+body {
+    height: auto !important;
+    min-height: 100% !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+body.pagelayout-base,
+body.pagelayout-standard {
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow-y: auto !important;
+}
+
+#page-wrapper {
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow: visible !important;
+}
+
+#page {
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow: visible !important;
+}
+
+#page-content,
+#page-content-wrapper,
+#region-main-box,
+#region-main {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+}
+
+.lh-contact-main,
+.lh-contact-hero,
+.lh-contact-page,
+.lh-contact-form {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+}
+
+// ============================================================
+// Learning Hub - Contact Header Consistency
+// ============================================================
+
+.lh-header {
+    min-height: 72px;
+}
+
+.lh-header-inner {
+    min-height: 72px;
+}
+
+.lh-brand {
+    font-size: 1rem;
+}
+
+.lh-brand-mark {
+    font-size: 0.95rem;
+}
+
+.lh-brand-text {
+    font-size: 1rem;
+}
+
+.lh-nav {
+    gap: 0.15rem;
+}
+
+.lh-nav-link {
+    font-size: 0.95rem;
+}
+
+.lh-nav-cta {
+    margin-left: 0.5rem;
+}

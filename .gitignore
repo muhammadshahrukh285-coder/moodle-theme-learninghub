@@ -1,0 +1,22 @@
+# Moodle / server-specific files
+*.log
+*.sql
+*.sql.gz
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# Local secrets / environment files
+.env
+.env.*

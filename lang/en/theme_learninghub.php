@@ -1,0 +1,33 @@
+<?php
+
+$string['pluginname'] = 'Learning Hub';
+$string['choosereadme'] = 'Learning Hub is a custom Boost-based Moodle theme.';
+$string['settings'] = 'Learning Hub settings';
+$string['brandingheading'] = 'Branding';
+$string['brandingheading_desc'] = 'Configure the visual identity used throughout the Learning Hub theme.';
+$string['logo'] = 'Main logo';
+$string['logo_desc'] = 'Upload the primary logo used throughout the theme. Recommended format: PNG or SVG.';
+$string['logocompact'] = 'Compact logo';
+$string['logocompact_desc'] = 'Upload a compact or square version of the logo for mobile navigation and compact layouts.';
+$string['favicon'] = 'Favicon';
+$string['favicon_desc'] = 'Upload the icon displayed in the browser tab. Recommended format: ICO or PNG.';
+$string['brandname'] = 'Brand name';
+$string['brandname_desc'] = 'Brand name used when a text-based brand is displayed.';
+$string['tagline'] = 'Tagline';
+$string['tagline_desc'] = 'Optional tagline displayed alongside the brand.';
+$string['logoalt'] = 'Logo alternative text';
+$string['logoalt_desc'] = 'Alternative text used for the main logo for accessibility.';
+$string['contactsettings'] = 'Contact settings';
+$string['contactemail'] = 'Contact recipient email';
+$string['contactemail_desc'] = 'Email address that receives messages submitted through the Learning Hub contact form.';
+$string['contactname'] = 'Contact recipient name';
+$string['contactname_desc'] = 'Name shown as the recipient of contact form notifications.';
+$string['contact'] = 'Contact';
+$string['contactintro'] = 'Have a learning project in mind? Get in touch with us.';
+$string['contactnamefield'] = 'Your name';
+$string['contactemailfield'] = 'Your email';
+$string['contactsubject'] = 'Subject';
+$string['contactmessage'] = 'Message';
+$string['contactsubmit'] = 'Send Message';
+$string['contactsuccess'] = 'Thank you. Your message has been sent successfully.';
+$string['contacterror'] = 'We could not send your message. Please try again.';

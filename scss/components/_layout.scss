@@ -1,0 +1,23 @@
+// ============================================================
+// Learning Hub - Layout
+// ============================================================
+
+body {
+    background-color: $lh-background;
+    color: $lh-text;
+}
+
+#page {
+    background-color: transparent;
+}
+
+#page-content {
+    background-color: transparent;
+}
+
+#region-main {
+    background-color: $lh-surface;
+    border-radius: $lh-radius-md;
+    box-shadow: $lh-shadow-sm;
+    border: 1px solid $lh-border;
+}

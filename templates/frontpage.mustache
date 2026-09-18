@@ -1,0 +1,590 @@
+{{!
+    Learning Hub Front Page
+
+    @template theme_learninghub/frontpage
+    @package theme_learninghub
+}}
+
+{{> theme_boost/head }}
+
+{{#favicon}}
+<link rel="icon" href="{{favicon}}" type="image/png">
+{{/favicon}}
+
+<body {{{ bodyattributes }}}>
+{{> core/local/toast/wrapper}}
+
+<div id="page-wrapper">
+
+    {{{ output.standard_top_of_body_html }}}
+
+    <!-- Header -->
+    <header class="lh-header">
+        <div class="lh-container lh-header-inner">
+
+<a href="{{{ config.wwwroot }}}" class="lh-brand">
+
+    {{#logo}}
+        <img
+            src="{{logo}}"
+            alt="{{logoalt}}"
+            class="lh-brand-logo">
+    {{/logo}}
+
+    {{^logo}}
+        <span class="lh-brand-mark">
+            <span></span>
+            <span></span>
+        </span>
+
+        <span class="lh-brand-text">
+            <strong>{{brandname}}</strong>
+            <small>{{tagline}}</small>
+        </span>
+    {{/logo}}
+
+</a>
+            <nav class="lh-navigation">
+            <a href="{{{ config.wwwroot }}}" class="lh-nav-link active">Home</a>
+            <a href="#lh-services" class="lh-nav-link">Features</a>
+            <a href="#lh-about" class="lh-nav-link">About Me</a>
+<a href="{{{ config.wwwroot }}}/local/learninghub/" class="lh-nav-link">Contact</a>
+            </nav>
+            <a href="#lh-contact" class="lh-header-cta">
+                Let's Build Your LMS →
+            </a>
+
+            <div class="lh-user-menu">
+                {{{ output.user_menu }}}
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- Hero -->
+    <main id="learninghub-frontpage">
+
+        <section class="lh-hero">
+
+            <div class="lh-hero-shape lh-shape-one"></div>
+            <div class="lh-hero-shape lh-shape-two"></div>
+
+            <div class="lh-container lh-hero-grid">
+
+                <!-- LEFT -->
+                <div class="lh-hero-content">
+
+                    <div class="lh-eyebrow">
+                        HELLO, I'M MUHAMMAD SHAHRUKH
+                    </div>
+
+                    <h1>
+                        I Build LMS
+                        <span>for You</span>
+                    </h1>
+
+                    <p>
+                        A full-stack eLearning specialist helping organizations
+                        design, develop and scale modern Learning Management
+                        Systems — built to engage, train and empower your people.
+                    </p>
+
+                    <div class="lh-hero-actions">
+
+                        <a href="{{{ config.wwwroot }}}/course/index.php"
+                           class="lh-btn lh-btn-primary">
+                            Get Started →
+                        </a>
+
+                        <a href="{{{ config.wwwroot }}}/my/"
+                           class="lh-btn lh-btn-outline">
+                            <span>▶</span> View Demo
+                        </a>
+
+                    </div>
+
+
+                    <!-- Feature highlights -->
+                    <div class="lh-hero-features">
+
+                        <div class="lh-feature">
+                            <span>⚙</span>
+                            <small>Customizable</small>
+                        </div>
+
+                        <div class="lh-feature">
+                            <span>▥</span>
+                            <small>Scalable</small>
+                        </div>
+
+                        <div class="lh-feature">
+                            <span>◇</span>
+                            <small>Secure</small>
+                        </div>
+
+                        <div class="lh-feature">
+                            <span>♙</span>
+                            <small>User Friendly</small>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Stats -->
+                    <div class="lh-hero-stats">
+
+                        <div>
+                            <strong>5+</strong>
+                            <span>Years Experience</span>
+                        </div>
+
+                        <div>
+                            <strong>50+</strong>
+                            <span>LMS Projects</span>
+                        </div>
+
+                        <div>
+                            <strong>20+</strong>
+                            <span>Happy Clients</span>
+                        </div>
+
+                        <div>
+                            <strong>∞</strong>
+                            <span>Learning Possibilities</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT -->
+                <div class="lh-hero-product">
+
+                    <div class="lh-product-glow"></div>
+
+<div class="lh-calligraphy">
+    <span>Learn</span>
+    <span>Grow</span>
+    <span>Perform</span>
+</div>
+
+
+                    <!-- LMS Dashboard -->
+                    <div class="lh-dashboard">
+
+                        <aside class="lh-dashboard-sidebar">
+
+                            <div class="lh-dashboard-logo">
+                                ◆
+                            </div>
+
+                            <div class="lh-dashboard-nav active">
+                                <span>⌂</span>
+                                Dashboard
+                            </div>
+
+                            <div class="lh-dashboard-nav">
+                                <span>▱</span>
+                                My Learning
+                            </div>
+
+                            <div class="lh-dashboard-nav">
+                                <span>▦</span>
+                                Course Catalogue
+                            </div>
+
+                            <div class="lh-dashboard-nav">
+                                <span>□</span>
+                                Calendar
+                            </div>
+
+                            <div class="lh-dashboard-nav">
+                                <span>▥</span>
+                                Reports
+                            </div>
+
+                            <div class="lh-dashboard-nav">
+                                <span>◇</span>
+                                Certificates
+                            </div>
+
+                        </aside>
+
+
+                        <div class="lh-dashboard-main">
+
+                            <div class="lh-dashboard-top">
+
+                                <div>
+                                    <strong>Welcome Back!</strong>
+                                    <small>Keep learning. Keep growing.</small>
+                                </div>
+
+                                <div class="lh-dashboard-user">
+                                    <span>MS</span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="lh-dashboard-stats">
+
+                                <div>
+                                    <span class="lh-stat-icon blue">▣</span>
+                                    <strong>3</strong>
+                                    <small>In Progress</small>
+                                </div>
+
+                                <div>
+                                    <span class="lh-stat-icon green">✓</span>
+                                    <strong>12</strong>
+                                    <small>Completed</small>
+                                </div>
+
+                                <div>
+                                    <span class="lh-stat-icon orange">●</span>
+                                    <strong>8</strong>
+                                    <small>Certificates</small>
+                                </div>
+
+                            </div>
+
+
+                            <div class="lh-progress-card">
+
+                                <div class="lh-progress-heading">
+                                    <strong>Learning Progress</strong>
+                                    <strong>75%</strong>
+                                </div>
+
+                                <div class="lh-progress-bar">
+                                    <span></span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="lh-courses">
+
+                                <strong>Recent Courses</strong>
+
+                                <div class="lh-course-item">
+                                    <span>01</span>
+                                    Islamic Banking Fundamentals
+                                    <b>›</b>
+                                </div>
+
+                                <div class="lh-course-item">
+                                    <span>02</span>
+                                    Compliance Awareness
+                                    <b>›</b>
+                                </div>
+
+                                <div class="lh-course-item">
+                                    <span>03</span>
+                                    Leadership Essentials
+                                    <b>›</b>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Your Photo -->
+                    <div class="lh-person">
+
+                        <img
+                            src="{{{ config.wwwroot }}}/theme/learninghub/pix/shahrukh-cutout.png"
+                            alt="Muhammad Shahrukh">
+
+                    </div>
+
+
+                    <!-- Quote -->
+                    <div class="lh-quote-card">
+                        <span>“</span>
+                        <strong>
+                            Turning learning goals<br>
+                            into real impact.
+                        </strong>
+                        <i></i>
+                    </div>
+
+
+                    <!-- Floating card -->
+                    <div class="lh-floating-card">
+
+                        <span>🚀</span>
+
+                        <div>
+                            <strong>Train</strong>
+                            <small>Engage · Empower</small>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Books -->
+                    <div class="lh-floating-books">
+                        <span>LEARN</span>
+                        <span>BUILD</span>
+                        <span>GROW</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+<section id="lh-services" class="lh-services">
+
+    <div class="lh-container">
+
+        <div class="lh-section-intro">
+            <span class="lh-section-eyebrow">WHAT I DO</span>
+
+            <h2>
+                LMS solutions built
+                <span>around your needs</span>
+            </h2>
+
+            <p>
+                From LMS deployment and customization to eLearning,
+                automation and reporting — I help organizations build
+                learning platforms that actually work.
+            </p>
+        </div>
+
+
+        <div class="lh-services-grid">
+
+            <article class="lh-service-card">
+                <div class="lh-service-icon">▣</div>
+                <h3>Moodle LMS Development</h3>
+                <p>
+                    Build, configure and customize Moodle LMS platforms
+                    for organizations of any size.
+                </p>
+                <a href="#lh-contact">Learn more →</a>
+            </article>
+
+
+            <article class="lh-service-card">
+                <div class="lh-service-icon">⚙</div>
+                <h3>LMS Customization</h3>
+                <p>
+                    Themes, plugins, dashboards, workflows and user
+                    experiences tailored to your requirements.
+                </p>
+                <a href="#lh-contact">Learn more →</a>
+            </article>
+
+
+            <article class="lh-service-card">
+                <div class="lh-service-icon">◆</div>
+                <h3>eLearning Development</h3>
+                <p>
+                    Interactive SCORM-based courses developed with
+                    Articulate Storyline 360.
+                </p>
+                <a href="#lh-contact">Learn more →</a>
+            </article>
+
+
+            <article class="lh-service-card">
+                <div class="lh-service-icon">↗</div>
+                <h3>Automation & Integrations</h3>
+                <p>
+                    Automate enrollment, reminders, reporting and connect
+                    Moodle with external systems and APIs.
+                </p>
+                <a href="#lh-contact">Learn more →</a>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="lh-about" class="lh-about">
+
+    <div class="lh-container lh-about-grid">
+
+        <div class="lh-about-photo">
+
+            <div class="lh-about-shape"></div>
+
+            <img
+                src="{{{ config.wwwroot }}}/theme/learninghub/pix/shahrukh-cutout.png"
+                alt="Muhammad Shahrukh">
+
+        </div>
+
+        <div class="lh-about-content">
+
+            <span class="lh-section-eyebrow">ABOUT ME</span>
+
+            <h2>
+                Building learning
+                <span>solutions with purpose</span>
+            </h2>
+
+            <p>
+                I'm a Digital Learning and LMS professional focused on
+                creating practical, engaging and scalable learning
+                experiences.
+            </p>
+
+            <p>
+                My work combines Moodle LMS development, eLearning
+                design, automation, integrations and learning technology
+                to help organizations turn their learning goals into
+                meaningful results.
+            </p>
+
+            <div class="lh-about-highlights">
+
+                <div>
+                    <strong>5+</strong>
+                    <span>Years in Learning Technology</span>
+                </div>
+
+                <div>
+                    <strong>16K+</strong>
+                    <span>Learners Supported</span>
+                </div>
+
+                <div>
+                    <strong>50+</strong>
+                    <span>Learning Projects</span>
+                </div>
+
+            </div>
+
+            <a href="#lh-contact" class="lh-btn lh-btn-primary">
+                Let's Work Together →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="lh-contact" class="lh-contact">
+
+    <div class="lh-container">
+
+        <div class="lh-contact-card">
+
+            <div class="lh-contact-content">
+
+                <span class="lh-section-eyebrow">LET'S WORK TOGETHER</span>
+
+                <h2>
+                    Have a learning
+                    <span>project in mind?</span>
+                </h2>
+
+                <p>
+                    Whether you need a new Moodle LMS, want to improve
+                    an existing platform, or need engaging eLearning
+                    content — let's build something that works for you.
+                </p>
+
+                <a href="mailto:hello@example.com"
+                   class="lh-btn lh-btn-primary">
+                    Start Your Project →
+                </a>
+
+            </div>
+
+            <div class="lh-contact-visual">
+                <div class="lh-contact-circle">✦</div>
+                <div class="lh-contact-dot"></div>
+                <div class="lh-contact-line"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+        {{{ output.course_content_header }}}
+        {{{ output.main_content }}}
+        {{{ output.activity_navigation }}}
+        {{{ output.course_content_footer }}}
+
+    </main>
+
+
+    {{{ output.standard_after_main_region_html }}}
+
+    {{> theme_boost/footer }}
+
+</div>
+
+</body>
+</html>
+
+{{#js}}
+M.util.js_pending('theme_learninghub/navigation');
+
+require(['theme_boost/loader'], function(Loader) {
+
+    const links = document.querySelectorAll('.lh-nav-link');
+    const sections = document.querySelectorAll(
+        '#lh-services, #lh-work, #lh-about, #lh-contact'
+    );
+
+    function updateActiveNav() {
+        let current = 'Home';
+
+        sections.forEach(function(section) {
+            const top = section.getBoundingClientRect().top;
+
+            if (top <= 120) {
+                current = section.id.replace('lh-', '');
+            }
+        });
+
+        links.forEach(function(link) {
+            link.classList.remove('active');
+
+            const target = link.getAttribute('href');
+
+            if (
+                (current === 'services' &&
+                    (target === '#lh-services')) ||
+                (current === 'work' &&
+                    target === '#lh-work') ||
+                (current === 'about' &&
+                    target === '#lh-about') ||
+                (current === 'contact' &&
+                    target === '#lh-contact') ||
+                (current === 'Home' &&
+                    target === '{{{ config.wwwroot }}}')
+            ) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', updateActiveNav, {
+        passive: true
+    });
+
+    updateActiveNav();
+
+    M.util.js_complete('theme_learninghub/navigation');
+
+});
+{{/js}}
